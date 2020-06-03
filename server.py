@@ -2,7 +2,7 @@ import os
 
 from flask import Flask
 from flask import request
-
+from flask import render_template
 import requests
 
 import firebase_admin
@@ -16,7 +16,7 @@ upstream = None
 
 @app.route('/')
 def home():
-    return "The homepage."
+    return render_template('index.html')
 
 @app.route('/connect')
 def connect():
